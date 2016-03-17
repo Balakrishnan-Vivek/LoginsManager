@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:minHeight="@dimen/page_row_height"
+              android:gravity="center"
+              android:layout_height="@dimen/page_row_height"
+              android:layout_width="match_parent">
+
+    <TextView android:id="@+id/login_hostname"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tools:text="http://test.com/test" />
+
+    <TextView android:id="@+id/login_username"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:drawablePadding="5dp"
+              android:maxLength="1024"
+              tools:text="username"/>
+
+</LinearLayout>
