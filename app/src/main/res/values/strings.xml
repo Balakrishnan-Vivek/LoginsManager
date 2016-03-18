@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LoginsManager</string>
+    <string name="failed_to_insert">Failed to insert new logins</string>
+    <string name="populate_dummy_login">Insert dummy login</string>
+</resources>
