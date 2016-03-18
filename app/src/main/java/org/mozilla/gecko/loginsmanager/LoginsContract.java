@@ -9,7 +9,7 @@ import android.net.Uri;
 
 // Contract class for Logins Content Provider.
 public class LoginsContract {
-    private static final Uri LOGINS_AUTHORITY_URI = Uri.parse("content://org.mozilla.fennec.db.logins");
+    private static final Uri LOGINS_AUTHORITY_URI = Uri.parse("content://" + BuildConfig.TARGET_PACKAGE_NAME + ".db.logins");
     public static final Uri LOGINS_URI = Uri.withAppendedPath(LOGINS_AUTHORITY_URI, "logins");
     public static final String HOSTNAME = "hostname";
     public static final String HTTP_REALM = "httpRealm";
