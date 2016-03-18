@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 
+// From gradle.properties.  Override by setting in ~/.gradle/gradle.properties.
+def targetPackageName = property("org.mozilla.gecko.loginsmanager.targetPackageName")
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -10,7 +13,15 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        // targetPackageName is set in gradle.properties.
+        buildConfigField 'String', 'TARGET_PACKAGE_NAME', "\"${targetPackageName}\""
+
+        manifestPlaceholders = [
+            TARGET_PACKAGE_NAME: targetPackageName,
+        ]
     }
+
     buildTypes {
         release {
             minifyEnabled false
