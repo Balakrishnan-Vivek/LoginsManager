@@ -57,20 +57,14 @@ public class LoginsFragment extends Fragment implements LoaderManager.LoaderCall
         }
 
         @Override
-        public View newView(Context context, Cursor cursor, ViewGroup parent) {
-            return LayoutInflater.from(context).inflate(R.layout.logins_item_row, parent, false);
+        public void bindView(View view, Context context, Cursor cursor) {
+            final LoginsListRow row = (LoginsListRow) view;
+            row.updateFromCursor(cursor);
         }
 
         @Override
-        public void bindView(View view, Context context, Cursor cursor) {
-            if (cursor == null) {
-                return;
-            }
-
-            final TextView hostnameView = (TextView) view.findViewById(R.id.login_hostname);
-            final TextView usernameView = (TextView) view.findViewById(R.id.login_username);
-            hostnameView.setText(cursor.getString(cursor.getColumnIndexOrThrow(LoginsContract.HOSTNAME)));
-            usernameView.setText(cursor.getString(cursor.getColumnIndexOrThrow(LoginsContract.ENCRYPTED_USERNAME)));
+        public View newView(Context context, Cursor cursor, ViewGroup parent) {
+            return LayoutInflater.from(parent.getContext()).inflate(R.layout.logins_item_row, parent, false);
         }
     }
 

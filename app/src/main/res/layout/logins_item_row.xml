@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="vertical"
-              android:minHeight="@dimen/page_row_height"
-              android:gravity="center"
-              android:layout_height="@dimen/page_row_height"
-              android:layout_width="match_parent">
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-    <TextView android:id="@+id/login_hostname"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              tools:text="http://test.com/test" />
-
-    <TextView android:id="@+id/login_username"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:drawablePadding="5dp"
-              android:maxLength="1024"
-              tools:text="username"/>
-
-</LinearLayout>
+<org.mozilla.gecko.loginsmanager.LoginsListRow xmlns:android="http://schemas.android.com/apk/res/android"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="@dimen/page_row_height"
+                                               android:minHeight="@dimen/page_row_height"/>
