@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="fennec_ui_orange">#FF9500</color>
+    <color name="tabs_tray_icon_grey">#AFB1B3</color>
+    <color name="about_page_header_grey">#F5F5F5</color>
 </resources>
