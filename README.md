@@ -6,7 +6,9 @@ This is an offshoot project for Mozilla fennec to quickly prototype a native Log
 
 ### Prerequisite
 
-To work with this app please install [fennec nightly]. This application shares the userID with fennec and thus is able to retrieve logins data.
+To work with app,  you need fennec installed in your device. This application shares the userID with fennec and thus is able to retrieve logins data. For those lazy bones like me, please install this [signed nightly apk] file.
+
+For those who are really curious, please compile and build following the [instructions]. You should also update the targetPackageName in gradle.properties to match with the compiled fennec installation.
 
 ### Todos
 
@@ -19,12 +21,13 @@ This is a short gist of task that needs to be done not in any particular order. 
  
 ### Limitations
 
-Fennec theme.xml, style.xml, TwoLinePageRow, FadedTextView are not exposed to this project. Thus, it would be more painful to get the visual stylings right. 
+Favicon is not exposed to this project. This is will updated while backporting this project to fennec codebase or as follow up bug. 
 
    [bug 1247999]: https://bugzilla.mozilla.org/show_bug.cgi?id=1247999
    [bug 946857]: https://bugzilla.mozilla.org/show_bug.cgi?id=946857
-   [fennec nightly]: https://ftp.mozilla.org/pub/mobile/nightly/latest-mozilla-central-android-api-15/
    [tasks description]: https://bugzilla.mozilla.org/show_bug.cgi?id=1247999#c2
+   [signed nightly apk]: https://www.dropbox.com/s/14e7715ze7cxk8w/gecko.apk?dl=0
+   [instructions] : https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_for_Android_build
 
 
 
